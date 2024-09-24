@@ -18,7 +18,7 @@ function Slider({ forecast }) {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        {forecast.map((day) => (
+        {forecast?.map((day) => (
           <SwiperSlide key={day.date}>
             <div className="flex justify-center "> 
             <Card

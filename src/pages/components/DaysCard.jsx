@@ -1,12 +1,17 @@
 import React from "react";
-import { Tilt } from "react-tilt";
+import Image from "next/image";
+
 
 
 function Card(props) {
+
+  
+ const imageurl=`https:${props.imageUrl}`;
   return (
-    <Tilt>
+    <>
+    {/* {props.forecastday.day?
    
-    <div
+  (  <div
    
       style={{
         width:"300px",
@@ -22,9 +27,11 @@ function Card(props) {
       }}
 
     >
-     <center> <img
-        src={props.imageURL}
+     <center> <Image
+        src={imageurl}
         alt={props.name}
+        width="10"
+        height="10"
         style={{
           height: "10rem",
           width: "10rem",
@@ -47,7 +54,7 @@ function Card(props) {
         <h2 className="name" style={{ fontSize: "20px", margin: "0", fontWeight: "bold" }}>
           {props.name}
         </h2>
-        <p style={{ margin: "5px 0" }}>{props.forecastday.date}</p>
+        <p style={{ margin: "5px 0" }}>{}</p>
         <p style={{ margin: "5px 0", fontSize: "18px" }}>
           Max: <strong>{props.forecastday.day.maxtemp_c}°C</strong>
         </p>
@@ -58,8 +65,9 @@ function Card(props) {
           Wind: <strong>{props.forecastday.day.maxwind_kph} kph</strong>
         </p>
       </div>
-    </div>
-    </Tilt>
+    </div>):<></>
+    } */}
+    </>
     
   );
 }
